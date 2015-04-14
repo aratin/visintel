@@ -1,0 +1,128 @@
+extends ../layouts/default
+//-extends /views/navbar
+block content
+    header
+      include ../views/navbar
+      include ../views/menu
+    section
+      #banner
+        if data.homepages.length
+          .msp-images
+            if data.homepages[0].bannerPic.exists
+              .row
+                .col-xs-12
+                  a(href=data.homepages[0]._.bannerPic.limit(900,600),rel='Homepage').msp-image
+                    img(src=data.homepages[0]._.bannerPic.limit(640,640))
+      #content-box
+        .container
+          h2 #{data.homepages[0].whatweoffertitle}
+          .row
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-pie-chart
+                span
+                  | #{data.homepages[0].Analyaticalporttalstring}
+                  br
+                  | #{data.homepages[0].Integrationastring}
+                  br
+                  | #{data.homepages[0].Environmentstring}
+                .black-hover-box
+                  h4 #{data.homepages[0].Analyaticalshortstring}
+                  p
+                    | #{data.homepages[0].Analyaticallongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-database
+                span
+                  | #{data.homepages[0].TibcoSpotfireManaged}
+                  br
+                  | #{data.homepages[0].SolutionData}
+                  br
+                  | #{data.homepages[0].CenterHosting}
+                .black-hover-box
+                  h4 #{data.homepages[0].TibcoSpotshortstring}
+                  p
+                    | #{data.homepages[0].TibcoSpotlongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-group
+                span
+                  | #{data.homepages[0].MarketResearch}
+                  br
+                  | #{data.homepages[0].SocialMedia}
+                  br
+                  | #{data.homepages[0].Analytics}
+                .black-hover-box
+                  h4 #{data.homepages[0].MarketResearchshortstring}
+                  p
+                    | #{data.homepages[0].MarketResearchlongstring}
+                  button.btn.btn-info(type="button") Learn More
+            .col-md-3
+              .offer-box
+                .icon-border
+                  .icon-box
+                    i.fa.fa-dot-circle-o
+                span
+                  | #{data.homepages[0].TibcoSpotfireCustom}
+                  br
+                  | #{data.homepages[0].SolutionDevelopment}
+                  br
+                  | #{data.homepages[0].Operations}
+                .black-hover-box
+                  h4 #{data.homepages[0].TibcoSpotfireCustomshortstring}
+                  p
+                    | #{data.homepages[0].TibcoSpotfireCustomlongstring}
+                  button.btn.btn-info(type="button") Learn More
+          .row
+            .col-md-6
+              h2 #{data.homepages[0].Aboutusstring}
+              p
+                | #{data.homepages[0].Aboutustextarea}
+              p
+                a.read-more(href="#") Read More &#62; &#62;
+            .col-md-6
+              h2 #{data.homepages[0].NewsAndUpdatetitle}
+              .row
+                .col-md-2
+                  if data.homepages.length
+                    .msp-images
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(900,600),rel='Homepage').msp-image
+                              img(src=data.homepages[0]._.NewsAndUpdateImage.limit(640,640))
+                .col-md-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
+                  p
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              .row
+                .col-md-2
+                  if data.homepages.length
+                    .msp-images
+                      if data.homepages[0].NewsAndUpdateImage.exists
+                        .row
+                          .col-xs-12
+                            a(href=data.homepages[0]._.NewsAndUpdateImage.limit(900,600),rel='Homepage').msp-image
+                              img(src=data.homepages[0]._.NewsAndUpdateImage.limit(640,640))
+                .col-md-10
+                  small #{data.homepages[0].NewsAndUpdateDate}
+                  p
+                    | #{data.homepages[0].NewsAndUpdatesubstring}
+                  p
+              hr
+              p
+                a.read-more(href="#") Read More &#62; &#62;
+      .container-fluid
+        .row
+          footer
+            include ../views/footer

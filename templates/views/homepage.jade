@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+include ../mixins/commenting
+
+block intro
+	h1 homepage Keystone JS
+
+block content
+	.navbar-brand
+		a(href='#')
+			//-img(alt='logo', src='#{data.homepages[0].profilePic}')
+			span First Name :
+			input(type='text', placeholder='Enter your first Name', value='#{data.homepages[0].firstName}')
