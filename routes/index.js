@@ -66,7 +66,7 @@ exports = module.exports = function(app) {
 	app.all('/mangementteam', routes.views.mangementteam);
 	app.all('/differentiator', routes.views.differentiator);
 	app.all('/career', routes.views.career);
-	app.all('/contactlist', routes.views.contactlist);
+	//app.all('/contactlist', routes.views.contactlist);
 	app.all('/partner', routes.views.partner);
 	app.get('/softwareproduct', routes.views.softwareproduct);
 	app.get('/consultingservice', routes.views.consultingservice);
